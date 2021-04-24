@@ -1,0 +1,11 @@
+<nav class = "navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <h4>All restaurants</h4>
+    <%= link_to 'Create', new_restaurant_path %>
+  </div>
+</nav>
+<ol class="list-group">
+<% @restaurants.each do |restaurant| %>
+  <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+<% end %>
+</ol>
